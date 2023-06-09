@@ -11,7 +11,7 @@ rename table products to product;
 
 insert into product(name, created_by, marca)
 values
-	('ipad', 7,'apple'),
+    ('ipad', 7,'apple'),
     ('iphone',7,'apple'),
     ('xiaomi12',8,'xiaomi'),
     ('watch',8,'apple'),
@@ -23,9 +23,9 @@ values
     select * from product;
     select u.id, u.email, p.name from user u left join product p on u.id = p.created_by;
     
-	select u.id, u.email, p.name from user u right join product p on u.id = p.created_by; -- no muestra users null porque llega desde la tabla right
+    select u.id, u.email, p.name from user u right join product p on u.id = p.created_by; -- no muestra users null porque llega desde la tabla right
     
-    select u.id, u.email, p.name from user u inner join product p on u.id = p.created_by; -- no muestra users null porque llega desde la tabla right
+    select u.id, u.email, p.name from user u inner join product p on u.id = p.created_by;
     
     select u.id, u.name, p.name from user u cross join product p;
     
